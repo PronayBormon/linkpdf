@@ -245,6 +245,10 @@ html.overflow-hidden {
     position: relative
 }
 
+.header-box__logo img {
+    max-height: 25px;
+}
+
 .page-bg:before {
     animation: show-hero-bg .33s ease .3s 1 forwards;
     background-color: #fff;
@@ -3676,14 +3680,14 @@ button.swiper-pagination-bullet {
 .content_container {
     display: grid;
     grid-template-columns: repeat(4, 4fr);
-    gap: 20px;
+    gap: 5px;
     margin-bottom: 20px;
 }
 
 .content_box {
     padding: 20px;
     background: #fff;
-    border-radius: 28px;
+    border-radius: 0px;
     max-width: 338px;
     padding: 32px;
     transition: box-shadow .3s;
@@ -3691,13 +3695,14 @@ button.swiper-pagination-bullet {
 }
 
 .box_top {
-    padding-bottom: 10px;
-    border-bottom: 1px solid #adadad;
-    margin-bottom: 10px;
+    /* padding-bottom: 10px; */
+    /* border-bottom: 1px solid #adadad; */
+    /* margin-bottom: 10px; */
 }
 
 .box_top p {
     color: #818181;
+    font-size: 13px;
 }
 
 .top_icon {
@@ -3706,17 +3711,18 @@ button.swiper-pagination-bullet {
     margin-bottom: 20px;
 }
 
-.top_icon i {
+.top_icon i,
+.top_icon svg {
     height: 48px;
     width: 48px;
     min-width: 48px;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #7357eb;
+    /* background: #7357eb; */
     color: #fff;
     font-size: 22px;
-    border-radius: 10px;
+    /* border-radius: 10px; */
     margin-right: 10px;
 }
 
@@ -3748,35 +3754,179 @@ button.swiper-pagination-bullet {
     margin-right: 10px;
 }
 
-@media(max-width: 1200px){
+.content_box a {
+    color: #000;
+}
+
+.content_box h1 {
+
+    font-size: 20px;
+
+    font-weight: 600;
+
+    color: #33333b;
+
+    margin-bottom: 8px;
+}
+
+@media(max-width: 1200px) {
     .content_box {
         padding: 20px;
     }
-    .top_icon i {
+
+    .top_icon i,
+    .top_icon svg {
         height: 40px;
         width: 40px;
         min-width: 40px;
     }
+
     .top_icon h1 {
         font-size: 20px;
     }
 }
-@media(max-width: 992px){
+
+@media(max-width: 992px) {
     .content_container {
         grid-template-columns: repeat(3, 4fr);
     }
 }
-@media(max-width: 768px){
+
+@media(max-width: 768px) {
     .content_container {
         grid-template-columns: repeat(2, 4fr);
     }
 }
-@media(max-width: 576px){
+
+@media(max-width: 576px) {
     .content_container {
         grid-template-columns: repeat(1, 4fr);
     }
+
     .content_box {
         max-width: 100%;
         padding: 32px;
     }
+}
+
+/* ========== Login ========== */
+.login_sec.register_sec {
+
+    padding: 10px;
+}
+
+.login_sec.register_sec h1 {
+
+    text-align: center;
+
+    font-weight: 600;
+
+    margin-bottom: 20px;
+}
+
+.login_sec.register_sec .social_btn {}
+
+.login_sec.register_sec .social_btn img {}
+
+.input_group {
+    position: relative;
+}
+
+.input_group input {}
+
+.input_group i {
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.btn-primary--login {
+
+    display: flex;
+
+    justify-content: center;
+
+    border: none;
+
+    min-width: 150px;
+
+    border-radius: 10px;
+
+    margin: 10px auto;
+
+    margin-top: 30px;
+}
+
+.forgot {
+
+    text-align: center;
+
+    margin: auto;
+
+    display: flex;
+
+    justify-content: center;
+
+    margin-bottom: 10px;
+
+    margin-top: 20px;
+
+    text-decoration: underline;
+
+    color: #000;
+
+    font-size: 14px;
+}
+
+.signup {
+
+    text-align: center;
+
+    font-size: 14px;
+}
+
+.register-link {}
+
+body.login_register {
+    background-color: #fff;
+}
+
+.login_sec.register_sec form {
+
+    padding-top: 10px;
+}
+
+.btn-social {
+
+    width: 100%;
+
+    border: none;
+
+    background: #fff;
+
+    box-shadow: 0 0 3px #adadad;
+
+    border-radius: 5px;
+
+    padding: 10px;
+
+    font-size: 13px;
+}
+
+.btn-social img {
+
+    height: 20px;
+
+    margin-right: 10px;
+}
+
+.login_sec.register_sec p {
+    text-align: center;
+    margin: 10px 0px;
+}
+
+.login_sec.register_sec p span {
+    font-size: 13px;
 }
