@@ -4042,19 +4042,19 @@ body.login_register {
 
 .profile_picture label {
 
-height: 60px;
+    height: 60px;
 
-width: 60px;
+    width: 60px;
 
-border: 1px solid #7357eb;
+    border: 1px solid #7357eb;
 
-border-radius: 50%;
+    border-radius: 50%;
 
-position: relative;
+    position: relative;
 
-margin-right: 10px;
+    margin-right: 10px;
 
-overflow: hidden;
+    overflow: hidden;
 }
 
 .profile_picture label i {
@@ -4348,7 +4348,8 @@ overflow: hidden;
 .sidebar_list aside::-webkit-scrollbar-thumb:hover {
     background: #7357eb;
 }
-.profile_picture:hover label i{
+
+.profile_picture:hover label i {
     display: flex;
     -webkit-transition: .4s;
 }
@@ -4372,5 +4373,178 @@ overflow: hidden;
 
     .sidebar_list.show {
         margin-left: 0px;
+    }
+}
+
+#pdf-viewers-container {
+    display: flex;
+    grid-template-columns: repeat(4, 4fr);
+    flex-wrap: wrap;
+    justify-content: center;
+    /* margin: 20px; */
+    padding: 20px;
+}
+
+.pdf-viewer {
+    max-height: 200px;
+    width: 150px;
+    background: #fff;
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 3px 10px;
+}
+
+.pdf-viewer canvas {
+    height: 100%;
+    width: 100%;
+    box-shadow: 0 0 10px #adadad;
+    border-radius: 2px;
+}
+
+.pdf_options {
+    position: absolute;
+    right: 0;
+    width: 300px;
+    top: 0;
+    background: #fff;
+    /* margin-top: 80px; */
+    z-index: 1;
+    box-shadow: -2px -3px 5px #0000001a;
+    border-left: 1px solid #00000047;
+    max-height: 100vh;
+    transition: .4s all ease-in-out;
+    -webkit-transition: .4s all ease-in-out;
+}
+
+.options_header {
+    text-align: center;
+    padding: 20px;
+    border-bottom: 1px solid #0000003b;
+}
+
+.options_header h1 {
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.option_body {
+    padding: 20px;
+    height: 68vh;
+    overflow: auto;
+}
+
+.option_footer {
+    position: fixed;
+    bottom: 0px;
+    background: #fff;
+    width: 300px;
+    padding: 20px;
+    margin: auto;
+    border: 1px solid #00000047;
+}
+
+.btn_change_pdf {
+    padding: 10px 20px;
+    width: 100%;
+    background: #7357eb;
+    color: #fff;
+    font-weight: 500;
+    border-radius: 5px;
+    border: none;
+}
+
+.preview_pdf {
+    min-height: 90vh;
+    position: relative;
+}
+
+.pdf_view_container {
+    margin-right: 300px;
+    margin-top: 30px;
+    position: relative;
+}
+
+.add_btns {
+
+    position: absolute;
+
+    right: 30px;
+
+    top: 30px;
+}
+
+.add_btns li {
+
+    width: fit-content;
+
+    margin-bottom: 10px;
+}
+
+.add_btns li label {
+
+    height: 35px;
+
+    width: 35px;
+
+    background: #7357eb;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    border-radius: 50%;
+
+    color: #fff;
+
+    font-size: 20px;
+}
+
+.add_btns li label i {}
+
+.btn_settings {
+    background: transparent;
+    border: none;
+    background: #7357eb;
+    padding: 5px;
+    font-size: 20px;
+    border-radius: 50%;
+    height: 35px;
+    width: 35px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+.btn_settings i {}
+
+
+
+
+@media(max-width: 768px) {
+    .pdf_view_container {
+        margin-right: 0px;
+    }
+    .btn_settings{
+        display: flex;
+    }
+
+    .pdf_options {
+        transform: translateX(142px);
+        opacity: 0;
+        visibility: hidden;
+        display: none;
+        -webkit-transition: .4s;
+        width: 0px;
+        transition: .4s all ease-in-out;
+    }
+}
+@media(max-width: 576px){
+    .pdf-viewer {
+        max-height: 155px;
+        width: 130px;
     }
 }
