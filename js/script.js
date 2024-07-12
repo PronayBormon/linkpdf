@@ -16,3 +16,8 @@ $(document).ready(function(){
         $(".pass_form").toggleClass("show");
     })
 })
+$(document).ready(function(){
+    $(".btn_settings").click(function(){
+        $(".pdf_options").toggleClass('show');
+    })
+})

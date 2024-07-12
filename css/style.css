@@ -4386,8 +4386,8 @@ body.login_register {
 }
 
 .pdf-viewer {
-    max-height: 200px;
-    width: 150px;
+    max-height: 230px;
+    width: 180px;
     background: #fff;
     text-align: center;
     padding: 10px;
@@ -4457,6 +4457,7 @@ body.login_register {
 .preview_pdf {
     min-height: 90vh;
     position: relative;
+    overflow: hidden;
 }
 
 .pdf_view_container {
@@ -4472,6 +4473,7 @@ body.login_register {
     right: 30px;
 
     top: 30px;
+    z-index: 999;
 }
 
 .add_btns li {
@@ -4533,13 +4535,23 @@ body.login_register {
     }
 
     .pdf_options {
-        transform: translateX(142px);
+        /* transform: translateX(200px); */
         opacity: 0;
         visibility: hidden;
-        display: none;
+        /* display: none; */
         -webkit-transition: .4s;
-        width: 0px;
+        /* width: 0px; */
         transition: .4s all ease-in-out;
+        -webkit-transition: .4s;
+        margin-right: -300px;
+    }
+    .pdf_options.show{
+        /* display: block; */
+        /* transform: translate(1px, 0px); */
+        opacity: 1;
+        visibility: visible;
+        /* width: 300px; */
+        margin-right: 0px;
     }
 }
 @media(max-width: 576px){
